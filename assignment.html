@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>Welcome to DXC- Login Form</title>
+    <script type="text/javascript">
+    function check()
+    {
+        var uname1=(document.getElementById("username").value);
+            var uname2=(document.getElementById("password").value);
+            a=uname2.length
+            if(uname1.length==0 )
+            {
+                var span1=document.getElementById("span1")
+                span1.innerHTML="<font color=green>enter the username</font>";
+            }
+            
+            
+            
+            else if (uname2.length == 0)
+            {
+                var span3=document.getElementById("span3")
+                span3.innerHTML="enter the password";
+            }
+           
+            else {
+                if(((uname2.charAt(0)) !== 'a') && ((uname2.length)<6  || (uname2.length)>12))
+            {
+                var span5=document.getElementById("span5")
+           span5.innerHTML="enter the password that has more than 6 and starts with a ";
+            }
+           else if( (uname2.charAt(0)) !== 'a')  
+           {
+             var span2=document.getElementById("span2")
+           span2.innerHTML="enter the password that starts with a ";
+            }
+          
+            else if ( (uname2.length)<6 || (uname2.length)>12 )
+            {
+                var span4=document.getElementById("span2")
+           span4.innerHTML="enter the password that has more than 6 digits ";
+            }
+            
+            else
+            {
+                alert("hello")
+            }
+           
+                }
+               
+            
+    }   
+           
+            
+    
+    </script>
+</head>
+
+<body bgcolor="pink" text="red">
+    <h2>
+        <center>Login Form</center>
+    </h2>
+    <form action="success.html">
+        <table cellspacing="10" cellpadding="10" >
+            <tr>
+                <td>User Name </td>
+                <td><input type="text" name="username" id="username" /></td> <td><span id="span1"></span></td> 
+            </tr>
+            
+            <tr>
+                <td>Password </td>
+                <td><input type="password" name="password" id="password" /></td> <td><span id="span2"></span></td> <td><span id="span3"></span></td> <td><span id="span4"></span></td> <td><span id="span5"></span></td>
+            <tr>
+                <td >
+                    <input type="button" value="go" onclick="check()">
+                    <input type="button" value="Check">
+                </td>
+                <td >
+                    <input type="reset" value="Clear"></td>
+            </tr>
+           
+            
+            
+        </table>
+    </form>
+</body>
+
+
+</html>

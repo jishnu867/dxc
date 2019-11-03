@@ -1,0 +1,7 @@
+1)db.banklist.find({City:'Woodbury'})
+2)db.banklist.find({"Closing Date":"20-Jun-14"})
+3)db.banklist.remove({"Closing Date":"20-Jun-14"})
+4)db.banklist.updateMany({City:"Chicago"},{$set:{"Closing Date":"31-Oct-2019"}})
+5)db.banklist.find({"Bank Name":/^A/})
+6)mongoexport -d dxcdb -c banklist -o banklist.csv
+7)mongoexport -d dxcdb -c banklist -o banklist.json
